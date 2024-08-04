@@ -16,7 +16,7 @@ def save_object(file_path, obj):  # It saves the data transformation pickle file
 
         os.makedirs(dir_path, exist_ok=True)  # Creates the directory if dir_path directory is not present. 
 
-        with open(file_path, "wb") as file_obj:
+        with open(file_path, "wb") as file_obj: # The file at file_path location is opened in write binary 'wb' mode. 
             pickle.dump(obj, file_obj)  # This line stores the object obj to the file represented by file_obj name.
 
     except Exception as e:
@@ -55,10 +55,10 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     
     
     
-# def load_object(file_path):
-#     try:
-#         with open(file_path, "rb") as file_obj:
-#             return pickle.load(file_obj)
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj: # The file at file_path location is opened in read binary mode.
+            return pickle.load(file_obj)  # This line converts file_obj which is a binary pickle file into a normal file. We convert a file into a binary file which is in the form of data bytes so that any file can be transmitted/stored in a hard disk . 
 
-#     except Exception as e:
-#         raise CustomException(e, sys)
+    except Exception as e:
+        raise CustomException(e, sys)  

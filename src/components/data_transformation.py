@@ -18,7 +18,7 @@ from src.utils import save_object   #  Saves the pickle file in the hard disk.
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path=os.path.join('artifacts',"proprocessor.pkl") # If I create a model and want to save it in a pickle file, for that I am creating it.
+    preprocessor_obj_file_path=os.path.join('artifacts',"preprocessor.pkl") # If I create a model and want to save it in a pickle file, for that I am creating it.
 
 class DataTransformation:
     def __init__(self):
