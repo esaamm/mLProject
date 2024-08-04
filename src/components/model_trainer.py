@@ -52,7 +52,7 @@ class ModelTrainer:
             }
             
             
-            params={
+            params={      # Doing Hyperparameter Tuning .
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
                     # 'splitter':['best','random'],
